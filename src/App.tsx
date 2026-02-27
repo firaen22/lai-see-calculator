@@ -313,10 +313,18 @@ export default function App() {
               </div>
               <div className="p-4">
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {['香港耀能協會', '毛守', '龜途', '癌症基金會', '兒童癌病基金', '香港流浪狗之家', '拯救貓狗協會'].map((charity, i) => (
-                    <div key={i} className="bg-red-50 text-red-800 font-medium p-3 rounded-lg text-center border border-red-100 text-sm hover:bg-red-100 transition-colors cursor-default">
-                      {charity}
-                    </div>
+                  {[
+                    { name: '香港耀能協會', url: 'https://www.sahk1963.org.hk/b5_support_2.php' },
+                    { name: '毛守', url: 'https://www.pgrs.life/donation/' },
+                    { name: '龜途', url: 'https://www.facebook.com/100077089665920/photos/' },
+                    { name: '癌症基金會', url: 'https://www.cancer-fund.org/one-off-and-cof-donation/?select=one-off' },
+                    { name: '兒童癌病基金', url: 'https://www.ccf.org.hk/zh-hant/support/donation/childrens_cancer_foundation/online_donation/' },
+                    { name: '香港流浪狗之家', url: 'https://www.hkhomelessdogsl.org.hk/donate' },
+                    { name: '拯救貓狗協會', url: 'https://hkscda.com/donation' }
+                  ].map((charity, i) => (
+                    <a key={i} href={charity.url} target="_blank" rel="noopener noreferrer" className="block bg-red-50 text-red-800 font-medium p-3 rounded-lg text-center border border-red-100 text-sm hover:bg-red-100 transition-colors">
+                      {charity.name}
+                    </a>
                   ))}
                 </div>
               </div>
