@@ -196,7 +196,7 @@ export default function App() {
                 <h2 className="text-3xl font-black tracking-wider">銀行入數報告</h2>
                 <p className="text-red-100 mt-2 text-sm">請向銀行職員展示此畫面</p>
               </div>
-              
+
               <div className="p-6">
                 <table className="w-full text-left border-collapse">
                   <thead>
@@ -282,7 +282,7 @@ export default function App() {
                 <div className="border-t border-red-100 pt-4">
                   <h3 className="font-bold text-red-800 mb-3">各大銀行分行及存鈔機搜尋：</h3>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <a href="https://www.hsbc.com.hk/zh-hk/branch-locator/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
+                    <a href="https://www.hsbc.com.hk/zh-hk/branch-finder/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
                       滙豐銀行 HSBC
                     </a>
                     <a href="https://www.bochk.com/tc/branch.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
@@ -294,10 +294,10 @@ export default function App() {
                     <a href="https://www.sc.com/hk/zh/atm-branch-locator/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
                       渣打銀行 Standard Chartered
                     </a>
-                    <a href="https://www.hkbea.com/html/tc/bea-about-bea-branch-atm-locator.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
+                    <a href="https://www.hkbea.com/html/tc/bea-branches-locations.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
                       東亞銀行 BEA
                     </a>
-                    <a href="https://www.dbs.com.hk/personal-zh/branch-atm-locator" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
+                    <a href="https://www.dbs.com.hk/index-zh/locator.page?pid=hk-personal-zh-global-header-textlink-branch" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-300 rounded-lg text-sm text-gray-700 hover:text-red-700 transition-colors font-medium">
                       星展銀行 DBS
                     </a>
                   </div>
@@ -340,13 +340,13 @@ export default function App() {
                   </div>
                   <div className="w-full">
                     <div className="flex border-b border-red-200 mb-4">
-                      <button 
+                      <button
                         onClick={() => setInvestmentTab('insurance')}
                         className={`pb-2 px-4 text-sm font-bold transition-colors ${investmentTab === 'insurance' ? 'text-red-700 border-b-2 border-red-700' : 'text-red-400 hover:text-red-600'}`}
                       >
                         保險儲蓄
                       </button>
-                      <button 
+                      <button
                         onClick={() => setInvestmentTab('tech')}
                         className={`pb-2 px-4 text-sm font-bold transition-colors ${investmentTab === 'tech' ? 'text-red-700 border-b-2 border-red-700' : 'text-red-400 hover:text-red-600'}`}
                       >
@@ -360,20 +360,20 @@ export default function App() {
                         <p className="text-gray-700 text-sm mt-1 mb-4 leading-relaxed">
                           首16年預期回報 <span className="font-bold text-red-600">4.5%</span>，期後每年 <span className="font-bold text-red-600">6.5%</span>
                         </p>
-                        
+
                         <div className="h-64 w-full bg-white p-2 rounded-lg border border-red-100">
                           <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={SAVINGS_DATA} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
                               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#fee2e2" />
-                              <XAxis 
-                                dataKey="year" 
-                                tick={{ fontSize: 12, fill: '#9ca3af' }} 
+                              <XAxis
+                                dataKey="year"
+                                tick={{ fontSize: 12, fill: '#9ca3af' }}
                                 tickMargin={10}
                                 minTickGap={20}
                                 axisLine={false}
                                 tickLine={false}
                               />
-                              <YAxis 
+                              <YAxis
                                 tick={{ fontSize: 12, fill: '#9ca3af' }}
                                 tickFormatter={(value) => value >= 1000000 ? `${(value / 1000000).toFixed(1)}M` : value >= 1000 ? `${(value / 1000).toFixed(0)}k` : value}
                                 axisLine={false}
@@ -381,10 +381,10 @@ export default function App() {
                                 width={50}
                               />
                               <Tooltip content={<CustomTooltip />} />
-                              <Line 
-                                type="monotone" 
-                                dataKey="indexedValue" 
-                                stroke="#dc2626" 
+                              <Line
+                                type="monotone"
+                                dataKey="indexedValue"
+                                stroke="#dc2626"
                                 strokeWidth={3}
                                 dot={false}
                                 activeDot={{ r: 6, fill: '#dc2626', stroke: '#fff', strokeWidth: 2 }}
@@ -392,9 +392,9 @@ export default function App() {
                             </LineChart>
                           </ResponsiveContainer>
                         </div>
-                        
+
                         <div className="mt-4">
-                          <button 
+                          <button
                             onClick={() => setShowTable(!showTable)}
                             className="flex items-center justify-center w-full py-2 text-sm font-medium text-red-700 bg-red-50 hover:bg-red-100 rounded-lg transition-colors border border-red-200"
                           >
@@ -404,7 +404,7 @@ export default function App() {
                               <><ChevronDown className="w-4 h-4 mr-1" /> 顯示詳細數據</>
                             )}
                           </button>
-                          
+
                           {showTable && (
                             <div className="mt-2 max-h-40 overflow-y-auto bg-white rounded-lg border border-red-100 text-sm animate-in fade-in slide-in-from-top-2 duration-200">
                               <table className="w-full text-left">
@@ -435,20 +435,20 @@ export default function App() {
                         <p className="text-gray-700 text-sm mt-1 mb-4 leading-relaxed">
                           歷史數據參考 (2008-2026)，累計回報達 <span className="font-bold text-red-600">1001%</span> (年化回報約 14.3%)
                         </p>
-                        
+
                         <div className="h-64 w-full bg-white p-2 rounded-lg border border-red-100">
                           <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={TECH_FUND_DATA} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
                               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#fee2e2" />
-                              <XAxis 
-                                dataKey="year" 
-                                tick={{ fontSize: 12, fill: '#9ca3af' }} 
+                              <XAxis
+                                dataKey="year"
+                                tick={{ fontSize: 12, fill: '#9ca3af' }}
                                 tickMargin={10}
                                 minTickGap={10}
                                 axisLine={false}
                                 tickLine={false}
                               />
-                              <YAxis 
+                              <YAxis
                                 tick={{ fontSize: 12, fill: '#9ca3af' }}
                                 tickFormatter={(value) => value}
                                 axisLine={false}
@@ -456,10 +456,10 @@ export default function App() {
                                 width={40}
                               />
                               <Tooltip content={<TechTooltip />} />
-                              <Line 
-                                type="monotone" 
-                                dataKey="indexedValue" 
-                                stroke="#059669" 
+                              <Line
+                                type="monotone"
+                                dataKey="indexedValue"
+                                stroke="#059669"
                                 strokeWidth={3}
                                 dot={{ r: 3, fill: '#059669', strokeWidth: 0 }}
                                 activeDot={{ r: 6, fill: '#059669', stroke: '#fff', strokeWidth: 2 }}
@@ -467,9 +467,9 @@ export default function App() {
                             </LineChart>
                           </ResponsiveContainer>
                         </div>
-                        
+
                         <div className="mt-4">
-                          <button 
+                          <button
                             onClick={() => setShowTable(!showTable)}
                             className="flex items-center justify-center w-full py-2 text-sm font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors border border-emerald-200"
                           >
@@ -479,7 +479,7 @@ export default function App() {
                               <><ChevronDown className="w-4 h-4 mr-1" /> 顯示詳細數據</>
                             )}
                           </button>
-                          
+
                           {showTable && (
                             <div className="mt-2 max-h-40 overflow-y-auto bg-white rounded-lg border border-emerald-100 text-sm animate-in fade-in slide-in-from-top-2 duration-200">
                               <table className="w-full text-left">
